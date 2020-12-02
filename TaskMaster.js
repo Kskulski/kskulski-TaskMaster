@@ -38,7 +38,7 @@ function xUpdate() {
 }
 
 function importWindow() {
-    window.open("file:///C:/Users/Kevin/Documents/github/kskulski-TaskMaster/importWindow.html");
+    window.open("https://kskulski-taskmaster.azurewebsites.net/importWindow");
 }
 
 function chooseEx() {
@@ -53,7 +53,7 @@ function chooseEx() {
 }
 
 function importList(example) {
-    var list = JSON.parse("file:///C:/Users/Kevin/Documents/github/kskulski-TaskMaster/" + example.value + ".json")
+    var list = JSON.parse("https://kskulski-taskmaster.azurewebsites.net/" + example.value + ".json")
     var i;
     for (i = 0; i < list.length; i++) {
         addItem(list[i]);
