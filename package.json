@@ -1,0 +1,19 @@
+{
+  "name": "kskulski-taskmaster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "TaskMaster.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kskulski/kskulski-TaskMaster.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kskulski/kskulski-TaskMaster/issues"
+  },
+  "homepage": "https://github.com/Kskulski/kskulski-TaskMaster#readme"
+}
