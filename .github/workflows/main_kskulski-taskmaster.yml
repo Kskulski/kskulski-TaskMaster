@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'kskulski-taskmaster'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_77fdd71afde24e58af1fae41b6982c79 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_82d7522df251426aaab5f6106eba4d72 }}
         package: .
