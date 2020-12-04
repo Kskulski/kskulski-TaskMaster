@@ -38,7 +38,7 @@ function xUpdate() {
 }
 
 function importWindow() {
-    //window.open("https://kskulski-taskmaster.azurewebsites.net/importWindow");
+    
 }
 
 function chooseEx() {
@@ -53,7 +53,6 @@ function chooseEx() {
 }
 
 function importList(example) {
-    //var list = JSON.parse("https://kskulski-taskmaster.azurewebsites.net/" + example.value + ".json")
     var i;
     for (i = 0; i < list.length; i++) {
         addItem(list[i]);
