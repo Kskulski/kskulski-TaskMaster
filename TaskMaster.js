@@ -40,7 +40,7 @@ function xUpdate() {
 function importWindow() {
     
 }
-
+/*
 function chooseEx() {
     var list = document.getElementById("exampleUL");
     var i;
@@ -57,7 +57,7 @@ function importList(example) {
     for (i = 0; i < list.length; i++) {
         addItem(list[i]);
     }
-}
+}*/
 
 function login() {
 
