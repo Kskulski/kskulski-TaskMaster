@@ -1,4 +1,10 @@
 //pass input for new list function?
+document.getElementById("itemUL").addEventListener("click", function(ev) {
+    if (ev.target.tagName == "LI") {
+        ev.target.classList.toggle("done");
+    }
+});
+
 function newItem() {
     var input = document.getElementById("newInput").value;
     addItem(input);
@@ -28,16 +34,16 @@ function addX(item) {
 
 function xUpdate() {
     var X = document.getElementsByClassName("X");
-        var i;
-        for (i = 0; i < X.length; i++) {
-            X[i].onclick = function() {
-                var item = this.parentElement;
-                item.remove();
-            }
+    var i;
+    for (i = 0; i < X.length; i++) {
+        X[i].onclick = function() {
+            var item = this.parentElement;
+            item.remove();
         }
+    }
 }
 
-function importWindow() {
+function importEx() {
     
 }
 /*

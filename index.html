@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="TaskMaster.css">
-    <script src="TaskMaster.js"></script>
-    <title>The TaskMaster</title>
+    <title>The TaskMaster!</title>
 </head>
 
 <body onload=xUpdate()>
     <div id="titleDiv" class="header">
         <h1 style="margin:10px">TaskMaster</h1>
         <input type="text" id="newInput" placeholder="Add an item...">
-        <span onclick="newItem()" class="button">Add</span><br>
-        <span onclick="importWindow()" class="button">Examples</span>
+        <span onclick="newItem()" class="button">Add</span>
+        <span onclick="importEx()" class="button">Examples</span><br>
         <span onclick="login()" class="button">Login/Register</span>
+        <span onclick="load()" class="button">Load</span>
         <span onclick="save()" class="button">Save</span>
     </div>
 
@@ -23,8 +23,10 @@
         <li>Type in a new item and click add to put it on the list.<span class="X">X</span></li>
         <li>Click on list items to check them off.<span class="X">X</span></li>
         <li>Click on the "x" at the end of an item to remove it.<span class="X">X</span></li>
-        <li>import/export<span class="X">X</span></li>
-        <li>register<span class="X">X</span></li>
+        <li>import/export examples<span class="X">X</span></li>
+        <li>register/login<span class="X">X</span></li>
     </ul>
+
+    <script src="TaskMaster.js"></script>
 </body>
 </html>
