@@ -55,13 +55,14 @@ function getRequest(choice) {
     xhttp.onreadystatechange = function() {
         if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
             data = JSON.parse(this.responseText);
+            alert(data);
             for(var i = 0; i < data.list.length; i++) {
                 var obj = data.list[i];
                 addItem(obj.item);
             }
         }
     }
-    xhttp.open("GET", "https://kskulski-new-test.azurewebsites.net/examples" + choice.toString());
+    xhttp.open("GET", "https://kskulski-new-test.azurewebsites.net/examples");// + choice.toString());
     xhttp.send(); 
 }
 
