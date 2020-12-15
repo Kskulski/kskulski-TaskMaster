@@ -2,7 +2,7 @@
   "name": "kskulski-taskmaster",
   "version": "1.0.0",
   "description": "To do list program with xmlhttp to get examples",
-  "main": "index.html",
+  "main": "TaskMaster.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
