@@ -61,7 +61,7 @@ function getRequest(choice) {
             }
         }
     }
-    xhttp.open("GET", "http://localhost:3000/examples/" + choice.toString());
+    xhttp.open("GET", "https://kskulski-taskmaster.azurewebsites.net:3000/examples" + choice.toString());
     //http://www.azure.kskulski-taskmaster.net:3000/examples/
     xhttp.send(); 
 }
