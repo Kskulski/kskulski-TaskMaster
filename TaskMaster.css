@@ -47,6 +47,10 @@ input {
     border: solid;
 } 
 
+.form {
+    display: none;
+}
+
 ul {
     margin: 0;
     padding: 0;

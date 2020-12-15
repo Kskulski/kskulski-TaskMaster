@@ -1,7 +1,14 @@
 //pass input for new list function?
+var loginStatus = false;
+
 document.getElementById("itemUL").addEventListener("click", function(ev) {
     if (ev.target.tagName == "LI") {
         ev.target.classList.toggle("done");
+    }
+});
+document.getElementById("newInput").addEventListener("keyup", function(ev) {
+    if (ev.key == "Enter") {
+        newItem();
     }
 });
 
@@ -43,43 +50,68 @@ function xUpdate() {
     }
 }
 
-function importEx() {
-    
-}
-/*
-function chooseEx() {
-    var list = document.getElementById("exampleUL");
-    var i;
-    for (i = 0; i < list.length; i++) {
-        list[i].onclick = function() {
-            importList(list[i]);
-            window.close();
+function getRequest(choice) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+            data = JSON.parse(this.responseText);
+            for(var i = 0; i < data.list.length; i++) {
+                var obj = data.list[i];
+                addItem(obj.item);
+            }
         }
+    }
+    xhttp.open("GET", "http://localhost:3000/examples/" + choice.toString());
+    //http://www.azure.kskulski-taskmaster.net:3000/examples/
+    xhttp.send(); 
+}
+
+function exampleForm() {
+    var form = document.getElementById("exForm");
+    if (form.style.display == "initial") {
+        form.style.display = "none";
+    } else {
+        form.style.display = "initial";
     }
 }
 
-function importList(example) {
-    var i;
-    for (i = 0; i < list.length; i++) {
-        addItem(list[i]);
-    }
-}*/
+function importExample() {
+    clearList();
+    const options = document.querySelectorAll("input[name=examples]");
+    let choice;
+        for (const op of options) {
+            if (op.checked) {
+                choice = op.value;
+                break;
+            }
+        }
+    getRequest(choice);
+    document.getElementById("exForm").style.display = "none";
+}
 
 function login() {
 
 }
 
 function save() {
-
+    if (loginStatus === false) {
+        alert("Please login first to save your list!");
+    }
 }
 
 //new button?
 function load() {
-
+    if (loginStatus == false) {
+        alert("Please login to choose which list to load.");
+    }
 }
 
-//delete?
+//add button
 function clearList() {
-    
+    var list = document.getElementById("itemUL");
+    while (list.firstChild) {
+        list.removeChild(list.firstChild);
+    }
 }
+
 

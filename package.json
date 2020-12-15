@@ -1,0 +1,20 @@
+{
+  "name": "kskulski-taskmaster",
+  "version": "1.0.0",
+  "description": "To do list program with xmlhttp to get examples",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kskulski/kskulski-TaskMaster.git"
+  },
+  "author": "Kevin Skulski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kskulski/kskulski-TaskMaster/issues"
+  },
+  "homepage": "https://github.com/Kskulski/kskulski-TaskMaster#readme"
+}

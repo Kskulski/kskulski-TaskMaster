@@ -8,24 +8,34 @@
 </head>
 
 <body onload=xUpdate()>
-    <div id="titleDiv" class="header">
+    <div id="titleDiv" class="header"><!--rename this class?-->
         <h1 style="margin:10px">TaskMaster</h1>
         <input type="text" id="newInput" placeholder="Add an item...">
         <span onclick="newItem()" class="button">Add</span>
-        <span onclick="importEx()" class="button">Examples</span><br>
+        <span onclick="exampleForm()" class="button">Examples</span><br>
         <span onclick="login()" class="button">Login/Register</span>
-        <span onclick="load()" class="button">Load</span>
-        <span onclick="save()" class="button">Save</span>
+        <span onclick="getRequest()" class="button">Save/Load</span>
+        <span onclick="clearList()" class="button">Clear List</span>
     </div>
 
     <ul id="itemUL">
         <li>Example of how to use TaskMaster.<span class="X">X</span></li>
         <li>Type in a new item and click add to put it on the list.<span class="X">X</span></li>
         <li>Click on list items to check them off.<span class="X">X</span></li>
-        <li>Click on the "x" at the end of an item to remove it.<span class="X">X</span></li>
-        <li>import/export examples<span class="X">X</span></li>
-        <li>register/login<span class="X">X</span></li>
+        <li>Click on the "X" at the end of an item to remove it.<span class="X">X</span></li>
+        <li>Click on examples to bring up some example lists to choose from.<span class="X">X</span></li>
     </ul>
+
+    <div id="exForm" class="form">
+        <form>
+            <input type="radio" id="workout" name="examples" value="1"><label for="workout">Workout Plan</label><br>
+            <input type="radio" id="car" name="examples" value="2"><label for="car">Car Checklist</label><br>
+            <input type="radio" id="chores" name="examples" value="3"><label for="chores">Chores List</label><br>
+            <input type="radio" id="shopping" name="examples" value="4"><label for="shopping">Shopping List</label><br>
+            <input type="radio" id="lawn" name="examples" value="5"><label for="car">Lawn Care</label><br>
+        </form>
+        <button onclick="importExample()" class="button">Submit</button>
+    </div>
 
     <script src="TaskMaster.js"></script>
 </body>
