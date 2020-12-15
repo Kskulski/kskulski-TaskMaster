@@ -5,10 +5,11 @@ app.use(express.static("public"));
 var server = http.createServer(app);
 server.listen(process.env.PORT || 8080);
 
-const jsonServer = require("json-server");
-const jServer = jsonServer.create();
-const router = jsonServer.router("examples.json");
-const middlewares = jsonServer.defaults();
+var jsonServer = require("json-server");
+var jServer = jsonServer.create();
+var router = jsonServer.router("examples.json");
+var middlewares = jsonServer.defaults();
 jServer.use(middlewares);
 jServer.use(router);
-jServer.listen(3000);
+var webjServer = http.createServer(jServer)
+webjServer.listen(3000);
