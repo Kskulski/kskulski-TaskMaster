@@ -1,4 +1,5 @@
 var http = require("http");
+var https = require("https");
 var express = require("express");
 var app = express();
 app.use(express.static("public"));
@@ -11,5 +12,5 @@ var router = jsonServer.router("examples.json");
 var middlewares = jsonServer.defaults();
 jServer.use(middlewares);
 jServer.use(router);
-var webjServer = http.createServer(jServer)
+var webjServer = https.createServer(jServer)
 webjServer.listen(3000);
