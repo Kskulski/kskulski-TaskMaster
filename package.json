@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Kskulski/kskulski-TaskMaster#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
     "json-server": "^0.16.3",
     "xmlhttprequest": "^1.8.0"
   }
