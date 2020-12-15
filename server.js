@@ -12,5 +12,5 @@ var router = jsonServer.router("examples.json");
 var middlewares = jsonServer.defaults();
 jServer.use(middlewares);
 jServer.use(router);
-var webjServer = https.createServer(jServer)
+var webjServer = https.createServer(jServer);
 webjServer.listen(3000);
